@@ -1,6 +1,7 @@
 package com.sumuzu.newsapimvp.network
 
 import com.sumuzu.newsapimvp.model.ResponseServer
+import io.reactivex.rxjava3.core.Flowable
 import retrofit2.Call
 import retrofit2.http.GET
 
@@ -8,7 +9,8 @@ import retrofit2.http.GET
 interface NewsService {
 
     @GET("everything?q=olahraga&from=2021-01-10&sortBy=publishedAt&apiKey=09aabdb7aaa1465da0c96ae8a0d16c4a")
-    fun getData(): Call<ResponseServer>
+//    fun getData(): Call<ResponseServer>
+    fun getData(): Flowable<ResponseServer>
 
 
 }
